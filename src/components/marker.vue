@@ -87,8 +87,7 @@ export default buildComponent({
   mappedProps: props,
   events,
   name: 'marker',
-  // Update this line to use AdvancedMarkerElement
-  ctr: () => google.maps.marker.AdvancedMarkerElement,
+  ctr: () => google.maps.Marker,
 
   inject: {
     $clusterPromise: {
@@ -102,7 +101,7 @@ export default buildComponent({
     }
 
     if (this.$clusterObject) {
-      // Repaint will be performed in `updated()` of cluster
+      // Repaint will be performed in updated() of cluster
       this.$clusterObject.removeMarker(this.$markerObject, true)
     } else {
       this.$markerObject.setMap(null)
