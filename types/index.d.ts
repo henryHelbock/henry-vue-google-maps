@@ -1,1 +1,1 @@
-declare module 'henry-vue-google-maps';
+declare module '@fawmi/vue-google-maps';
