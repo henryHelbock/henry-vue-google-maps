@@ -15,7 +15,7 @@ import Autocomplete from './components/autocomplete.vue'
 import MapElementMixin from './components/mapElementMixin'
 import buildComponent from './components/build-component'
 import MountableMixin from './utils/mountableMixin'
-import {Env} from "./utils/env";
+import { Env } from "./utils/env";
 let GMapApi = null;
 
 export {
@@ -91,7 +91,7 @@ function makeGMapApiPromiseLazy(options) {
       // Load the
       // This will only be evaluated once
       if (Env.isServer()) {
-        return new Promise(() => {}).then(onApiLoaded)
+        return new Promise(() => { }).then(onApiLoaded)
       } else {
         return new Promise((resolve, reject) => {
           try {
